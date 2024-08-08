@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`bg-black w-[90%] mx-auto ${comicFont.className}`}>{children}</body>
+      <body className={`bg-black w-[100%] mx-auto ${comicFont.className}`}>{children}</body>
     </html>
   );
 }

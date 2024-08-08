@@ -1,9 +1,9 @@
 'use client'
-
-import { stringify } from "querystring";
 import { useEffect, useState } from "react"
+import Link from "next/link";
 
 function Products() {
+
     interface Data {
         id:number,
         title:string,
@@ -22,7 +22,7 @@ function Products() {
         }
     ]);
 
-    const NextIMG = () => {
+    const NextIMG2 = () => {
         if (product[0].id === 1) {
             setProduct([{
                 id:2,
@@ -66,7 +66,7 @@ function Products() {
         }
     };
     
-    const BackIMG = () => {
+    const BackIMG2 = () => {
         if (product[0].id === 5) {
             setProduct([{
                 id:4,
@@ -101,37 +101,39 @@ function Products() {
             }]);
         } else if (product[0].id === 1) {
             setProduct([{
-                id:1,
-                title: 'Katana',
-                price: '99$',
-                description: 'Experience the precision of the traditional Japanese Katana. This high-quality steel sword features a sharp, curved blade and a balanced design, perfect for training or display.',
-                image: 'katana.png'
+                id:5,
+                title: 'Shuriken',
+                price:  '18 $',
+                description: 'This high-quality shuriken is designed for balance and accuracy. Perfect for martial arts practice or as a unique collectible, it combines functionality with aesthetic appeal.',
+                image: 'Cold Arms (2).png'
             }]);
         }
     };
     
     useEffect(() => {
-        const timer = setTimeout(NextIMG, 6000);
+        const timer = setTimeout(NextIMG2, 6000);
         return () => clearTimeout(timer);
     }, [product]);
 
 
     return(
-        <div className="products-container flex flex-col text-white mt-24 rounded-xl w-[100%] h-[50rem]">
+        <div id="products" className="products-container flex flex-col text-white mt-24 rounded-xl md:w-full h-[50rem] md:h-[58rem] md:pt-5 md:pb-14">
+            
             <div className="top">
-                <div className="title-products border-b-white border-b-[7px] gap-1 pb-5 w-[84%] mx-auto flex flex-col justify-center items-center mt-4">
-                    <h1 className="text-[45px] font-bold">Products</h1>
-                    <span className="text-[18px] text-center px-2">Discover our top-quality Ninjutsu gear and 
+                <div className="title-products border-b-[10px] gap-1 pb-5 w-[84%] md:w-full mx-auto flex flex-col justify-center items-center mt-4">
+                    <h1 className="text-[45px] md:text-[35px] font-bold">Products</h1>
+                    <span className="text-[18px] md:text-[17px] text-center px-2">Discover our top-quality Ninjutsu gear and 
                         equipment. From ninja uniforms to training weapons 
                         and accessories, find everything you need to enhance 
                         your practice. Shop with us for the best in quality and 
                         service, and take your training to the next level.</span>
                 </div>
             </div>
-            <div className="bottom mt-2 container w-[80%] mx-auto">
 
-                <div className="left w-[20%] flex justify-start mr-10">
-                    <div className="card w-[8rem] h-full bg-black text-red-950 px-10 py-4 mt-4 container flex-col gap-10 text-[50px]">
+            <div className="bottom mt-2 container md:flex-col w-[80%] md:w-full mx-auto">
+
+                <div className="left w-[20%] md:w-full md:mx-auto flex justify-start mr-10">
+                    <div className="card w-[8rem] md:w-[95%] md:mx-auto h-full bg-black text-red-950 px-10 py-4 md:p-1 mt-4 container md:flex-row flex-col gap-10 md:gap-12 md:rounded-xl text-[50px] md:text-[35px]">
                         <section>N</section>
                         <section>I</section>
                         <section>N</section>
@@ -140,28 +142,30 @@ function Products() {
                     </div>
                 </div>
 
-                <div className="right w-[80%] container">
+                <div className="right w-[80%] md:w-full container">
                     <div className="products">
-                        <div className="top gap-12 flex justify-center items-center">
-                            <img className="w-14 cursor-pointer rounded-full rotate-180" src="ArrowB.png" alt="png"/>
+                        <div className="top gap-12 md:gap-0 flex justify-center items-center">
+                            <img onClick={NextIMG2} className="arooW md:hidden opacity-60 w-14 border-gray-700 border-4 cursor-pointer rounded-full rotate-180" src="ArrowB.png" alt="png"/>
                             {product.map((item) => {
                                 return(
-                                    <div onClick={NextIMG} className="card w-[34rem] h-[32rem] flex bg-black px-8 py-7 rounded-xl container flex-col" key={item.id}>
-                                        <img className="card w-[31rem] rounded-xl h-[16rem]" src={item.image} alt="png" />
-                                        <div className="flex px-2 mt-2 mb-1 w-[31rem]">
-                                            <h1 className="mr-auto text-[25px] font-bold text-white">{item.title}</h1>
-                                            <h2 className="text-[23px] text-red-900">{item.price}</h2>                                           
+                                    <div className="card w-[34rem] md:w-[95%] md:mt-6 md:h-full h-[32rem] flex bg-black px-8 md:px-3 md:py-5 py-7 rounded-xl container flex-col" key={item.id}>
+                                        <img className="card w-[31rem] md:w-[90%] rounded-xl h-[16rem] md:h-full" src={item.image} alt="png" />
+                                        <div className="flex px-2 mt-2 mb-1 w-[31rem] md:w-[90%]">
+                                            <h1 className="mr-auto text-[30px] md:text-[26px] font-bold text-white">{item.title}</h1>
+                                            <h2 className="text-[23px] md:text-[21px] bg-gray-800 px-4 py-1 rounded-[30px/30px] text-red-900">{item.price}</h2>                                           
                                         </div>    
-                                        <p className="w-[31rem] mt-1 px-1 text-[17px]">{item.description}</p>
+                                        <p className="w-[31rem] md:w-[90%] mt-2 px-1 text-[17px] md:text-[16px]">{item.description}</p>
                                     </div>
                                 )
                             })}
-                            <img onClick={BackIMG} className="w-14 cursor-pointer rounded-full" src="ArrowB.png" alt="png"/>
+                            <img onClick={BackIMG2} className="arooW md:hidden opacity-60 w-14 border-gray-700 border-4 cursor-pointer rounded-full" src="ArrowB.png" alt="png"/>
                         </div>
                     </div>
+                    <Link href="/Products"><button className="fixed-btn absolute right-10 top-[14rem] md:top-[55rem] md:right-7 w-[13rem] py-2 rounded-[10px] bg-black text-white text-xl md:text-[18px] md:">More Products...</button></Link>
                 </div>
 
             </div>
+
         </div>
     )
 }
