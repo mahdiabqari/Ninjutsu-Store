@@ -117,7 +117,7 @@ function Products() {
 
 
     return(
-        <div id="products" className="products-container flex flex-col text-white mt-24 rounded-xl md:w-full h-[50rem] md:h-[90rem] md:pt-5 md:pb-14">
+        <div id="products" className="products-container flex flex-col text-white mt-24 rounded-xl md:w-full h-[50rem] md:h-[120rem] md:pt-5 md:pb-14">
             
             <div className="top">
                 <div className="title-products border-b-[10px] gap-1 pb-5 w-[84%] md:w-full mx-auto flex flex-col justify-center items-center mt-4">
