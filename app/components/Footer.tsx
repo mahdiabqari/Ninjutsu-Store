@@ -1,6 +1,6 @@
 function Footer() {
     return(
-        <div className="footer md:px-[10px] flex justify-center items-center w-full h-[17rem] bg-black text-white mt-[10rem] md:mt-[5rem] md:h-[32rem]">
+        <div className="footer md:px-[10px] flex justify-center items-center w-full h-[17rem] bg-black text-white mt-[10rem] md:mt-[6.5rem] md:h-[32rem]">
             <div className="con w-[85%] flex gap-7 md:flex-col md:w-[100%] md:my-2 md:gap-0">
                 
                 <div className="flex flex-col justify-center items-start w-[33%] ml-28 md:mx-0 md:w-[100%] md:border-b-2 md:justify-start md:mt-2">
