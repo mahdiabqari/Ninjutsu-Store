@@ -161,7 +161,7 @@ function Products() {
                             <img onClick={BackIMG2} className="arooW md:hidden opacity-60 w-14 border-gray-700 border-4 cursor-pointer rounded-full" src="ArrowB.png" alt="png"/>
                         </div>
                     </div>
-                    <Link href="/Products"><button className="fixed-btn absolute right-10 top-[14rem] md:top-[90rem] md:right-7 w-[13rem] py-2 rounded-[10px] bg-black text-white text-xl md:text-[18px] md:">More Products...</button></Link>
+                    <Link href="/Products"><button className="fixed-btn absolute right-10 top-[14rem] md:top-[60rem] md:right-7 w-[13rem] py-2 rounded-[10px] bg-black text-white text-xl md:text-[18px] md:">More Products...</button></Link>
                 </div>
 
             </div>
