@@ -117,7 +117,7 @@ function Products() {
 
 
     return(
-        <div id="products" className="products-container flex flex-col text-white mt-24 rounded-xl md:w-full h-[50rem] md:h-[61rem] md:pt-5 md:pb-14">
+        <div id="products" className="products-container flex flex-col text-white mt-24 rounded-xl md:w-full h-[50rem] md:h-[62rem] md:pt-5 md:pb-14">
             
             <div className="top">
                 <div className="title-products border-b-[10px] gap-1 pb-5 w-[84%] md:w-full mx-auto flex flex-col justify-center items-center mt-4">
@@ -161,7 +161,7 @@ function Products() {
                             <img onClick={BackIMG2} className="arooW md:hidden opacity-60 w-14 border-gray-700 border-4 cursor-pointer rounded-full" src="ArrowB.png" alt="png"/>
                         </div>
                     </div>
-                    <Link href="/Products"><button className="fixed-btn absolute right-10 top-[14rem] md:top-[55rem] md:right-7 w-[13rem] py-2 rounded-[10px] bg-black text-white text-xl md:text-[18px] md:">More Products...</button></Link>
+                    <Link href="/Products"><button className="fixed-btn absolute right-10 top-[14rem] md:top-[61rem] md:right-7 w-[13rem] py-2 rounded-[10px] bg-black text-white text-xl md:text-[18px] md:">More Products...</button></Link>
                 </div>
 
             </div>
